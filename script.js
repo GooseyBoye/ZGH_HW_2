@@ -42,45 +42,45 @@ function addR() {
 
 }
 
-// // Add a column
-// function addC() {
-//     //Creates a variable table and access grid through getElementbyId
-//     var table = document.getElementById('grid');
+// Add a column
+function addC() {
+    //Creates a variable table and access grid through getElementbyId
+    var table = document.getElementById('grid');
 
-//      //Create a variable row to create a table row element
-//     var  column = document.createElement("tr");
+     //Create a variable row to create a table row element
+    var  column = document.createElement("tr");
     
-//     //If theres no rows
-//     //Add +1 to both cols and rows number, as technically cell at [0][0] is both row and a column
-//     //also creates a data cell variable
-//     //Appends/adds the data cell to the column
-//     //Appends/adds the column to the table
-//     if(numRows == 0){
-//         numCols++;
-//         numRows++;
-//         var cell = document.createElement('td');
-//         column.appendChild(cell);
-//         table.appendChild(column)
-//     }
-//     //If theres a column
-//     //add 1 to the number of cols
-//     //Will repeat for the amount of rows there are
-//     //appends/adds data cell to the column
-//     //adds it to the table
-//     else{
-//         numCols++;
-//         // console.log(numRows)
-//         // console.log(numCols)
-//         for(var i = 0; i < numRows; i++){
-//             var cell = document.createElement('td');
-//             table.children[i].appendChild(cell);
+    //If theres no rows
+    //Add +1 to both cols and rows number, as technically cell at [0][0] is both row and a column
+    //also creates a data cell variable
+    //Appends/adds the data cell to the column
+    //Appends/adds the column to the table
+    if(numRows == 0){
+        numCols++;
+        numRows++;
+        var cell = document.createElement('td');
+        column.appendChild(cell);
+        table.appendChild(column)
+    }
+    //If theres a column
+    //add 1 to the number of cols
+    //Will repeat for the amount of rows there are
+    //appends/adds data cell to the column
+    //adds it to the table
+    else{
+        numCols++;
+        // console.log(numRows)
+        // console.log(numCols)
+        for(var i = 0; i < numRows; i++){
+            var cell = document.createElement('td');
+            table.children[i].appendChild(cell);
 
-//             //Used to check if columns adding properly at their index
-//             // var indexCol = numCols - 1;
-//             // console.log("Added column at: "+ indexCol);
-//         }
-//     }
-// }
+            //Used to check if columns adding properly at their index
+            // var indexCol = numCols - 1;
+            // console.log("Added column at: "+ indexCol);
+        }
+    }
+}
 
 // // Remove a row
 // function removeR() {
