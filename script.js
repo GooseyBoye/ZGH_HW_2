@@ -170,21 +170,21 @@ function addC() {
 //     }
 // }
 
-// // Fill all cells
-// //Using a for loop, sets the backgroundColor of the cells to the color
-// //the user selcted
-// function fillAll(){
-//     var cellsToFill = document.querySelectorAll('td');
-//     for(var i = 0; i < (numCols*numRows); i++){
-//         cellsToFill[i].style.backgroundColor = colorSelected;
-//     }
-// }
+// Fill all cells
+//Using a for loop, sets the backgroundColor of the cells to the color
+//the user selcted
+function fillAll(){
+    var cellsToFill = document.querySelectorAll('td');
+    for(var i = 0; i < (numCols*numRows); i++){
+        cellsToFill[i].style.backgroundColor = colorSelected;
+    }
+}
 
-// // Clear all cells
-// //Same implementation as fillAll(), but instead sets the color to be nothing AKA default white
-// function clearAll(){
-//     var cellsToFill = document.querySelectorAll('td');
-//     for(var i = 0; i < (numCols*numRows); i++){
-//         cellsToFill[i].style.backgroundColor = "";
-//     }
-// }
+// Clear all cells
+//Same implementation as fillAll(), but instead sets the color to be nothing AKA default white
+function clearAll(){
+    var cellsToFill = document.querySelectorAll('td');
+    for(var i = 0; i < (numCols*numRows); i++){
+        cellsToFill[i].style.backgroundColor = "";
+    }
+}
