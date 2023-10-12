@@ -82,31 +82,31 @@ function addC() {
     }
 }
 
-// // Remove a row
-// function removeR() {
-//     //If no rows, do nothing
-//     if(numRows == 0){
-//         console.log("Do Nothing")
-//     }
-//     //If we do have rows
-//     //Create a variable table and access grid through getElementbyId
-//     //remove the last/newest row added
-//     //Bug Fix: when NumRows got to zero, NumCols wouldnt update, 
-//     //Fix: When numRows reaches 0, there will also be no columns, therefore, set cols to 0
-//     else{
-//         var table = document.getElementById('grid');
-//         table.removeChild(table.lastElementChild);
-//         numRows--;
-//         if(numRows == 0){
-//             numCols = 0;
-//         }
+// Remove a row
+function removeR() {
+    //If no rows, do nothing
+    if(numRows == 0){
+        console.log("Do Nothing")
+    }
+    //If we do have rows
+    //Create a variable table and access grid through getElementbyId
+    //remove the last/newest row added
+    //Bug Fix: when NumRows got to zero, NumCols wouldnt update, 
+    //Fix: When numRows reaches 0, there will also be no columns, therefore, set cols to 0
+    else{
+        var table = document.getElementById('grid');
+        table.removeChild(table.lastElementChild);
+        numRows--;
+        if(numRows == 0){
+            numCols = 0;
+        }
 
-//         //Helper to make sure Bug Fix was implemented and working properly
-//         //console.log("Rows remamining: "+numRows + " current columns: " + numCols)
+        //Helper to make sure Bug Fix was implemented and working properly
+        //console.log("Rows remamining: "+numRows + " current columns: " + numCols)
 
-//     }
+    }
 
-// }
+}
 
 
 // //Helper Function For Tests: Reset Table
@@ -119,37 +119,37 @@ function addC() {
 //     }
 // }
 
-// // Remove a column
-// function removeC() {
-//     //Does nothing when no columns
-//     if(numCols == 0){
-//         console.log("Do Nothing");
-//     }
-//     //IF there are columns
-//     //Create a variable table and access grid through getElementbyId
-//     //remove the earliest/oldest columns added
-//     //Does this by deleting the first cell at row[i] cell[0];
-//     else{
-//         var table = document.getElementById('grid');
-//         for(var i = 0; i < numRows; i++){
-//             table.rows[i].deleteCell(0);     
-//         }
-//         numCols--;
-//         //Bug: Sometimes, Num of rows wouldnt reset, leading to instability
-//         //Bug Fix: when Num of Cols reaches 0, calls the removeR() function as long as theres rows still "technically" there
-//         //doing numRows = 0 wasnt working, not sure why?
-//          if(numCols == 0){
-//             while(numRows >0){
-//                 removeR();
-//             }
-//         }
+// Remove a column
+function removeC() {
+    //Does nothing when no columns
+    if(numCols == 0){
+        console.log("Do Nothing");
+    }
+    //IF there are columns
+    //Create a variable table and access grid through getElementbyId
+    //remove the earliest/oldest columns added
+    //Does this by deleting the first cell at row[i] cell[0];
+    else{
+        var table = document.getElementById('grid');
+        for(var i = 0; i < numRows; i++){
+            table.rows[i].deleteCell(0);     
+        }
+        numCols--;
+        //Bug: Sometimes, Num of rows wouldnt reset, leading to instability
+        //Bug Fix: when Num of Cols reaches 0, calls the removeR() function as long as theres rows still "technically" there
+        //doing numRows = 0 wasnt working, not sure why?
+         if(numCols == 0){
+            while(numRows >0){
+                removeR();
+            }
+        }
 
-//         //Helper to make sure Bug Fix was implemented Properly
-//         //console.log("Columns remaining: " + numCols + " current rows: " + numRows);
+        //Helper to make sure Bug Fix was implemented Properly
+        //console.log("Columns remaining: " + numCols + " current rows: " + numRows);
 
-//     }
+    }
     
-// }
+}
 
 // // Set global variable for selected color
 // function selectColor(){
