@@ -151,24 +151,24 @@ function removeC() {
     
 }
 
-// // Set global variable for selected color
-// function selectColor(){
-//     colorSelected = document.getElementById("selectedColorId").value;
-//     console.log(colorSelected);
-// }
+// Set global variable for selected color
+function selectColor(){
+    colorSelected = document.getElementById("selectedColorId").value;
+    console.log(colorSelected);
+}
 
 
-// // Fill all uncolored cells
-// function fillU(){
-//     //Creates a variable color checker in which all td/cells are stored
-//     var colorChecker = document.querySelectorAll('td');
-//     //loops through, checks if theres a backgroundcolor style and wether or not its empty, if it is, sets the color
-//     //to the color the user selects
-//     for(var i = 0; i < (numCols*numRows); i++){
-//         if(colorChecker[i].style.backgroundColor == "")
-//             colorChecker[i].style.backgroundColor = colorSelected;
-//     }
-// }
+// Fill all uncolored cells
+function fillU(){
+    //Creates a variable color checker in which all td/cells are stored
+    var colorChecker = document.querySelectorAll('td');
+    //loops through, checks if theres a backgroundcolor style and wether or not its empty, if it is, sets the color
+    //to the color the user selects
+    for(var i = 0; i < (numCols*numRows); i++){
+        if(colorChecker[i].style.backgroundColor == "")
+            colorChecker[i].style.backgroundColor = colorSelected;
+    }
+}
 
 // Fill all cells
 //Using a for loop, sets the backgroundColor of the cells to the color
