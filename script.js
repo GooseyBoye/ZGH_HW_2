@@ -109,15 +109,15 @@ function removeR() {
 }
 
 
-// //Helper Function For Tests: Reset Table
-// //Resets the table by removing every single row
-// function resetT(){
-//     while(numRows > 0){
-//         removeR();
-//         //Helper to make sure was implemented proeprly
-//         //console.log("resetT function | remaining rows: "+numRows);
-//     }
-// }
+//Helper Function For Tests: Reset Table
+//Resets the table by removing every single row
+function resetT(){
+    while(numRows > 0){
+        removeR();
+        //Helper to make sure was implemented proeprly
+        //console.log("resetT function | remaining rows: "+numRows);
+    }
+}
 
 // Remove a column
 function removeC() {
